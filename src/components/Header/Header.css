@@ -1,5 +1,20 @@
-.header {
-  background-color: pink;
-  width: 100%;
-  color: black;
+.header{
+    background-color: #ABDD93;
+    width: 100%;
+    color: black;
+    font-style: oblique;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
+
+.header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+}
+
+.header h1 {
+    font-size: 30px;
 }

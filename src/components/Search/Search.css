@@ -1,0 +1,13 @@
+.wrapper-search{
+    width: 100%;
+    font-style: oblique;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.buscador{
+  color: grays;
+}
+#imput-busqueda-de-peliculas{
+    color: gray;
+}

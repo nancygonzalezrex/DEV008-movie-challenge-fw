@@ -1,0 +1,37 @@
+.wrapper-welcome {
+  background-color: rgb(125, 186, 233);
+  width: 100%;
+  color: black;
+  display: flex;
+  justify-content: center;
+  height: 165px;
+  margin-top: 8px;
+}
+
+.wrapper-detail{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.saludo {
+  font-size: 32px;
+  color: rgb(248, 242, 242);
+}
+.parrafo {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+}
+.wrapper-img{
+  width: 30%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+.img-pop-corn {
+  width: 150px;
+  height: 150px;
+}
