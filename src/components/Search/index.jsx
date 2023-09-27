@@ -8,6 +8,7 @@ const Search = () => {
           placeholder="buscar.."
           id="input-busqueda-de-peliculas"
         />
+        <button> buscar </button>
         <img className="lupa" src="" alt="" />
       </section>
     </div>

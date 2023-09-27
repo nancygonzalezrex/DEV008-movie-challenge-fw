@@ -1,37 +1,42 @@
+//hook useEffect permite definir efectos y useState para manejar el estado y useEffect
 import { useEffect, useState } from "react";
 import "./MoviesList.css";
 import Movie from "../Movie";
 
 const MoviesList = () => {
   const [loading, setLoading] = useState(true);
-  const [data, setData] = useState(true);
+  const [data, setData] = useState([]);
+  const urlBase = "https://www.omdbapi.com/";
+  const search = "s=marvel";
+  const apiKey = "apiKey=daa2c066";
+  const endpoint = `${urlBase}?${search}&${apiKey}`;
   useEffect(() => {
-    fetch("https://rickandmortyapi.com/api/character")
+    fetch(endpoint)
       .then((response) => response.json())
-      .then((data) => {
-        setData(data.results);
+      .then((movie) => {
+        setData(movie.Search);
         setLoading(false);
-      });
+      })
+      .catch((error) => console.log(error));
   }, []);
   return (
     <>
       {loading && (
         <div className="wrapper-loading">
-          <div className="lds-heart">
-            <div></div>
-          </div>
+          <span className="loader"></span>
         </div>
       )}
-      <div className="wrapper-movies-list">
-        {!loading &&
-          data.map((item) => {
+      {!loading && (
+        <div className="wrapper-movies-list">
+          {data.map((item) => {
             return (
               <>
-                <Movie imagen={item.image} />
+                <Movie imagen={item.Poster} />
               </>
             );
           })}
-      </div>
+        </div>
+      )}
     </>
   );
 };
